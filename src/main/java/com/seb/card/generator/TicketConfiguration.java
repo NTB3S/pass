@@ -1,6 +1,6 @@
 package com.seb.card.generator;
 
-import com.seb.card.generator.adapter.mapper.TicketMapper;
+import com.seb.card.generator.adapter.mapper.EntityMapper;
 import com.seb.card.generator.adapter.persistence.jpa.JpaTicketRepository;
 import com.seb.card.generator.adapter.persistence.jpa.TicketRepositoryAdapter;
 import com.seb.card.generator.application.service.CreateSessionService;
@@ -23,8 +23,8 @@ public class TicketConfiguration {
 
     @Bean
     public TicketRepository ticketRepository(JpaTicketRepository repository,
-                                      TicketMapper ticketMapper){
-        return new TicketRepositoryAdapter(repository, ticketMapper);
+                                      EntityMapper entityMapper){
+        return new TicketRepositoryAdapter(repository, entityMapper);
     }
 
     @Bean

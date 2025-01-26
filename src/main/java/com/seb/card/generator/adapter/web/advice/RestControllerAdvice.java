@@ -1,7 +1,7 @@
 package com.seb.card.generator.adapter.web.advice;
 
 
-import com.seb.card.generator.adapter.mapper.ErrorMapper;
+import com.seb.card.generator.adapter.mapper.DtoMapper;
 import com.seb.card.generator.adapter.web.advice.dto.ValidationErrorDto;
 import com.seb.card.generator.domain.exception.InvalidDomainCreationException;
 import lombok.RequiredArgsConstructor;
@@ -16,7 +16,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class RestControllerAdvice extends ResponseEntityExceptionHandler {
 
-    private final ErrorMapper mapper;
+    private final DtoMapper mapper;
 
     @ExceptionHandler(InvalidDomainCreationException.class)
     protected ResponseEntity<List<ValidationErrorDto>> handleIllegalArgumentException(InvalidDomainCreationException exception) {
