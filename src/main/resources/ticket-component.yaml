@@ -1,0 +1,30 @@
+components:
+  schemas:
+    CreateTicketRequestDto:
+      type: object
+      properties:
+        firstName:
+          type: string
+        lastName:
+          type: string
+        issuer:
+          type: string
+        sessions:
+          type: array
+          items:
+            $ref: './session-component.yaml#/components/schemas/CreateSessionRequestDto'
+    TicketDto:
+      type: object
+      properties:
+        id:
+          type: string
+        firstName:
+          type: string
+        lastName:
+          type: string
+        issuer:
+          type: string
+        sessions:
+          type: array
+          items:
+            $ref: './session-component.yaml#/components/schemas/SessionDto'
