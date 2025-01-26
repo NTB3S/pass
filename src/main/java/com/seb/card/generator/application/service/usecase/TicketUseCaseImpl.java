@@ -1,6 +1,6 @@
-package com.seb.card.generator.application.service.impl;
+package com.seb.card.generator.application.service.usecase;
 
-import com.seb.card.generator.application.service.CreateSessionService;
+import com.seb.card.generator.application.service.SessionService;
 import com.seb.card.generator.application.utils.IdUtils;
 import com.seb.card.generator.domain.model.ticket.CreateTicketRequest;
 import com.seb.card.generator.domain.model.ticket.Ticket;
@@ -9,10 +9,10 @@ import com.seb.card.generator.port.out.TicketRepository;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public class CreateTicketServiceImpl implements CreateTicketUseCase {
+public class TicketUseCaseImpl implements CreateTicketUseCase {
 
     private final TicketRepository repository;
-    private final CreateSessionService createSession;
+    private final SessionService createSession;
 
     @Override
     public Ticket create(CreateTicketRequest ticketRequest) {

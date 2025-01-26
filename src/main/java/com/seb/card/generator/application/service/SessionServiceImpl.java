@@ -1,13 +1,12 @@
-package com.seb.card.generator.application.service.impl;
+package com.seb.card.generator.application.service;
 
-import com.seb.card.generator.application.service.CreateSessionService;
 import com.seb.card.generator.application.utils.IdUtils;
 import com.seb.card.generator.domain.model.session.CreateSessionRequest;
 import com.seb.card.generator.domain.model.session.Session;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public class CreateSessionServiceImpl implements CreateSessionService {
+public class SessionServiceImpl implements SessionService {
 
     @Override
     public Session build(CreateSessionRequest request) {
@@ -16,4 +15,10 @@ public class CreateSessionServiceImpl implements CreateSessionService {
                 request.description());
 
     }
+
+    @Override
+    public Session cancel(Session sessionToCancel) {
+        return sessionToCancel.withCancelled(true);
+    }
+
 }

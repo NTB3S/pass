@@ -6,10 +6,12 @@ import lombok.RequiredArgsConstructor;
 import org.openapitools.api.TicketsApi;
 import org.openapitools.model.CreateTicketRequestDto;
 import org.openapitools.model.TicketDto;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RequiredArgsConstructor
 @RestController
+@RequestMapping("/api")
 public class TicketController implements TicketsApi {
     private final CreateTicketUseCase ticketUseCase;
     private final DtoMapper mapper;

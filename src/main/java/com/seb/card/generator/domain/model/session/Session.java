@@ -2,12 +2,14 @@ package com.seb.card.generator.domain.model.session;
 
 import com.seb.card.generator.domain.exception.InvalidDomainCreationException;
 import com.seb.card.generator.domain.exception.ValidationError;
+import lombok.With;
 import org.apache.commons.lang3.StringUtils;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Optional;
 
+@With
 public record Session(String id,
                       LocalDate dueDate,
                       Optional<LocalDate> completionDate,
