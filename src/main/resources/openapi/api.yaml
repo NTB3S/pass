@@ -4,8 +4,8 @@ info:
   version: 1.0.0
 
 paths:
-  /sessions/{sessionId}/cancel:
-    post:
+  /sessions/{sessionId}:
+    delete:
       operationId: cancelSession
       summary: Cancel the session of a specific ticket
       description: Cancel a specific session for a ticket based on the provided ticket ID and session ID
