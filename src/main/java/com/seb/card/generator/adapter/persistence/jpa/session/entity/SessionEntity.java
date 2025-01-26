@@ -17,6 +17,5 @@ public class SessionEntity {
     private String description;
     private LocalDate dueDate;
     private LocalDate completionDate;
-    private Double amountPaid;
     private Boolean isCancelled;
 }
