@@ -4,18 +4,12 @@ info:
   version: 1.0.0
 
 paths:
-  /sessions/{sessionId}:
-    put:
+  /sessions/{sessionId}/cancel:
+    post:
       operationId: cancelSession
       summary: Cancel the session of a specific ticket
       description: Cancel a specific session for a ticket based on the provided ticket ID and session ID
       parameters:
-        - name: ticketId
-          in: path
-          required: true
-          description: The ID of the ticket
-          schema:
-            type: string
         - name: sessionId
           in: path
           required: true
@@ -28,7 +22,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: './component/ticket-component.yaml#/components/schemas/TicketDto'
+                $ref: './component/session-component.yaml#/components/schemas/SessionDto'
         '404':
           description: Ticket or session not found
   /tickets:

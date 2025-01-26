@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/api")
 public class TicketController implements TicketsApi {
     private final CreateTicketUseCase ticketUseCase;
     private final DtoMapper mapper;
