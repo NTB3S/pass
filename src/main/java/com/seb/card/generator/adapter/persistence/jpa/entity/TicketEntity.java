@@ -1,6 +1,5 @@
-package com.seb.card.generator.adapter.persistence.jpa.ticket.entity;
+package com.seb.card.generator.adapter.persistence.jpa.entity;
 
-import com.seb.card.generator.adapter.persistence.jpa.session.entity.SessionEntity;
 import jakarta.persistence.*;
 import lombok.*;
 

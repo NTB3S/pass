@@ -1,8 +1,8 @@
 package com.seb.card.generator;
 
 import com.seb.card.generator.adapter.mapper.TicketMapper;
-import com.seb.card.generator.adapter.persistence.jpa.ticket.JpaTicketRepository;
-import com.seb.card.generator.adapter.persistence.jpa.ticket.TicketRepositoryAdapter;
+import com.seb.card.generator.adapter.persistence.jpa.JpaTicketRepository;
+import com.seb.card.generator.adapter.persistence.jpa.TicketRepositoryAdapter;
 import com.seb.card.generator.application.service.CreateSessionService;
 import com.seb.card.generator.application.service.impl.CreateSessionServiceImpl;
 import com.seb.card.generator.application.service.impl.CreateTicketServiceImpl;

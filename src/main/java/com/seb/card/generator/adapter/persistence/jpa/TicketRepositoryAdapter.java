@@ -1,4 +1,4 @@
-package com.seb.card.generator.adapter.persistence.jpa.ticket;
+package com.seb.card.generator.adapter.persistence.jpa;
 
 import com.seb.card.generator.adapter.mapper.TicketMapper;
 import com.seb.card.generator.domain.model.ticket.Ticket;

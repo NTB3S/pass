@@ -1,6 +1,6 @@
 package com.seb.card.generator.adapter.mapper;
 
-import com.seb.card.generator.adapter.web.advice.ValidationErrorDto;
+import com.seb.card.generator.adapter.web.advice.dto.ValidationErrorDto;
 import com.seb.card.generator.domain.exception.ValidationError;
 import org.mapstruct.Mapper;
 

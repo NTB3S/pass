@@ -1,4 +1,4 @@
-package com.seb.card.generator.adapter.persistence.jpa.session.entity;
+package com.seb.card.generator.adapter.persistence.jpa.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
