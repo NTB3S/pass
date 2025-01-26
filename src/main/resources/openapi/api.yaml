@@ -1,0 +1,55 @@
+openapi: 3.0.1
+info:
+  title: Ticket API
+  version: 1.0.0
+
+paths:
+  /tickets/{ticketId}/sessions/{sessionId}:
+    get:
+      tags:
+        - Sessions
+      operationId: getSessionById
+      summary: Retrieve a specific session of a specific ticket
+      description: Retrieve a specific session for a ticket based on the provided ticket ID and session ID
+      parameters:
+        - name: ticketId
+          in: path
+          required: true
+          description: The ID of the ticket
+          schema:
+            type: string
+        - name: sessionId
+          in: path
+          required: true
+          description: The ID of the session
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A session for the given ticket was found
+          content:
+            application/json:
+              schema:
+                $ref: './component/session-component.yaml#/components/schemas/SessionDto'
+        '404':
+          description: Ticket or session not found
+  /tickets:
+    post:
+      tags:
+        - Tickets
+      operationId: createTicket
+      summary: Create a ticket
+      requestBody:
+        description: ticket details
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: './component/ticket-component.yaml#/components/schemas/CreateTicketRequestDto'
+      responses:
+        "201":
+          description: A JSON array of user names
+          content:
+            application/json:
+              schema:
+                $ref: './component/ticket-component.yaml#/components/schemas/TicketDto'
